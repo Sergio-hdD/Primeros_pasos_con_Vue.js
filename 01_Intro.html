@@ -14,8 +14,8 @@
 
         <input type="text" v-model="nuevaFruta"><!-- v-model conecta con el .js-->
 
-        <button v-on:click="agregarFruta">Agregar</button>
-        
+        <button @click="agregarFruta">Agregar</button>
+
         <ul>
             <li v-for="fruta of frutas">
                fruta: {{ fruta.nombre }} - cantidad: {{ fruta.cantidad}}
