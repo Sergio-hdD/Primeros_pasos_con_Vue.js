@@ -19,6 +19,8 @@
         <ul>
             <li v-for="fruta of frutas">
                fruta: {{ fruta.nombre }} - cantidad: <input type="number" v-model.number="fruta.cantidad"><!--Sin el .number lo toma como texto y algunas cosasa andarían mal-->
+               <button @click="fruta.cantidad++">+</button><!--También podia poner "fruta.cantidad = fruta.cantidad +1" se puede hacer cualquier operación de javascript-->
+               <button @click="fruta.cantidad--">-</button>
                <span v-if="fruta.cantidad ===0"> -Sin stock</span>
             </li>
         </ul>
