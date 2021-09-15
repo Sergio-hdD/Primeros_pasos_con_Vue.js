@@ -12,14 +12,13 @@
 
         <h1>{{ titulo }}</h1>
 
-        <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
-        <!-- @keyup.unaTecla nos permite tomar el evento de esa tecla... para ver otras opciones: https://vuejs.org/v2/guide/events.html#Key-Modifiers -->
+        <input type="text" v-model="nuevaFruta"><!-- v-model conecta con el .js-->
 
-<!--      <button @click="agregarFruta">Agregar</button>     -->  
+        <button @click="agregarFruta">Agregar</button>
 
         <ul>
             <li v-for="fruta of frutas">
-               fruta: {{ fruta.nombre }} - cantidad: {{ fruta.cantidad}}
+               fruta: {{ fruta.nombre }} - cantidad: <input type="number" v-model.number="fruta.cantidad"><!--Sin el .number lo toma como texto y algunas cosasa andarían mal-->
                <span v-if="fruta.cantidad ===0"> -Sin stock</span>
             </li>
         </ul>
