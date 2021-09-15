@@ -10,9 +10,13 @@
 <body>
     
     <div id="app" class="container mt-5">
+    
         <div :class="['p-3', 'text-white', fondo]">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error quibusdam voluptatum, iste illo veniam dolore maxime odio, voluptate iure aut eius ad animi blanditiis consequatur numquam a consequuntur. Ipsam!</p>
         </div>
+        <label>Ingrese la clase para el fondo
+            <input type="text" class="form-control my-3" v-model="fondo">
+        </label>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
