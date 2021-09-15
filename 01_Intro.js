@@ -8,5 +8,10 @@ const app = new Vue({
            {nombre:'Banana', cantidad:0}
         ],
         nuevaFruta: '' //si al inspeccionar en console pongo "app.nuevaFruta" se muestra lo que ingresa por el input
+    },
+    methods: {
+       agregarFruta(){
+           console.log('diste clic');
+       }   
     }
 })//instancio vue, es decir llamo a la librería que copie en el scrip "<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>" en el html
