@@ -19,8 +19,8 @@
             <input type="text" class="form-control my-3" v-model="fondo">
         </label>
 
-        <div class="text-white p-3" :class="{'bg-info' : color}">
-            <p>Con el objeto "{'bg-info' : color}" estoy diciendo que cuando "color" (definido en 01_2_Intro_clases.js) sea true se muestre el div con fondo azul (bg-info)</p>
+        <div class="text-white p-3" :class="{'bg-info' : color, 'bg-success' : !color}">
+            <p>Con el objeto "{'bg-info' : color, 'bg-success' : !color}" estoy diciendo que cuando "color" (definido en 01_2_Intro_clases.js) sea true se muestre el div con fondo azul (bg-info) y que cuando "color" sea false se muestre con fondo verde (bg-success)</p>
         </div>
     </div>
     
