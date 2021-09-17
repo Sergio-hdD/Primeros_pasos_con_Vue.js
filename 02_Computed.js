@@ -11,6 +11,13 @@ const app = new Vue({//esta llave denota que es un array
             //el ".reverse()" invierte el array
             //por último con ".join('')" lo vuelvo a juntar una vez que está invertido
             //en el split y en el join le estoy pasando un string vacio (sin espacio), por ende separa y junta sin ningún criterio (de a un caracter)
+        },
+        color(){
+            return {
+                'bg-success' : this.contador <= 33,//si contador es <= 33 retorno bg-success
+                'bg-warning' : this.contador > 33 && this.contador < 67,//si concador es > 33 y es < 67 retorno bg-warning
+                'bg-danger' : this.contador >= 67,//si es > 67 retorno bg-danger
+            }
         }
     }
 })//instancio vue, es decir llamo a la librería que copie en el scrip "<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>" en el html
