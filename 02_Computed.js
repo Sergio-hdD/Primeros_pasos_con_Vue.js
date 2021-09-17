@@ -1,7 +1,8 @@
 const app = new Vue({//esta llave denota que es un array
     el: '#app', //detecto el id = app
     data:{//en data abro un objeto, para trabajar con datos
-       mensaje: 'Hola, soy Sergio'
+       mensaje: 'Hola, soy Sergio',
+       contador: 0
     },
     computed:{//Se ejecuta cada vez que haya una modificación, permite hacer como el data, peron lógica
         traerInvertido(){//Se ejecuta sin necesidad de llamarlo en cada lugar, solo lo llamo donde quiero que retorne
