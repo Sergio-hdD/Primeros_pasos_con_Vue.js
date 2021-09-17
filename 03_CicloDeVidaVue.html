@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Ciclo de vida de Vue.js</title>
+</head>
+<body>
+    
+    <div id="app" class="cotainer">
+    
+      <h3>Funciones que se ejacuta durante el ciclo de vida de Vue.js</h3>
+      <a href="https://es.vuejs.org/v2/guide/instance.html#Diagrama-del-Ciclo-de-vida">aqui se puede ver el diagrama</a>  
+      <p>Estás funciones pueden ser aprovechadas en algún momento y están explicitadas el "03_CicloDeVidaVue.js" y si se inspeciona la pagína en console se puede ver</p>
+
+      <h3>{{ saludo }}</h3>
+      <p>Presione el botón "Cambiar" para ralizar un cambio y solo entonces se ejecutarán las funciones "beforeUpdate" y "updated"</p>
+      <button @click="saludo = 'saludo cambiado'">Cambiar</button>
+      <!--Cuando se presione el botón saludo se carga con saludo cambiado-->
+      <p>Presione el botón "Destruir" para destruir la instancia y solo entonces se ejecutarán las funciones "beforeDestroy" y "destroyed"</p>
+      <button @click="destruir()">Destruir</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="03_CicloDeVidaVue.js"></script>
+</body>
+</html>
